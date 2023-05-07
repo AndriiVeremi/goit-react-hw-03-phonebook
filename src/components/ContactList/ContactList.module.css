@@ -1,0 +1,33 @@
+.list {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+}
+
+.name {
+  margin-right: 20px;
+}
+
+.text {
+  margin-right: 40px;
+}
+
+.btn__on {
+  border: 1px solid #2196f3;
+  border-radius: 5px;
+  margin-left: auto;
+  display: block;
+  width: 80px;
+  height: 20px;
+  color: #f44336;
+  font-weight: 700;
+}
+
+.item_icon {
+  margin-right: 3px;
+}
