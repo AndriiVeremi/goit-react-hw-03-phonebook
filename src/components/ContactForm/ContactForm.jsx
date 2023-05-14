@@ -6,8 +6,7 @@ import {
   AiOutlineUserAdd,
   AiTwotonePhone,
 } from 'react-icons/ai';
-
-import css from './ContactForm.module.css'
+import { Form, Input, Label, Button, } from './ContactForm.styled';
 
 class ContactForm extends Component {
   state = {
@@ -39,16 +38,14 @@ class ContactForm extends Component {
 
   render() {
     return (
-      <form
-        className={css.form}
+      <Form
         autoComplete="off"
         onSubmit={this.handleSubmit}
       >
-        <label className={css.label} htmlFor={this.nameId}>
-          <AiOutlineUser className={css.name_icon} />
+        <Label htmlFor={this.nameId}>
+          <AiOutlineUser />
           Name :{' '}
-          <input
-            className={css.form__input}
+          <Input
             id={this.nameId}
             type="text"
             value={this.state.name}
@@ -58,13 +55,12 @@ class ContactForm extends Component {
             title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
             required
           />
-        </label>
+        </Label>
 
-        <label className={css.label} htmlFor={this.numberId}>
-          <AiTwotonePhone className={css.name_icon} />
+        <Label htmlFor={this.numberId}>
+          <AiTwotonePhone />
           Number : 
-          <input
-            className={css.form__input}
+          <Input
             id={this.numberId}
             type="tel"
             value={this.state.number}
@@ -74,13 +70,13 @@ class ContactForm extends Component {
             title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
             required
           />
-        </label>
+        </Label>
 
-        <button className={css.btn} type="submit">
-          <AiOutlineUserAdd className={css.btn__icon} />
+        <Button type="submit">
+          <AiOutlineUserAdd />
           Add contact
-        </button>
-      </form>
+        </Button>
+      </Form>
     );
   }
 }

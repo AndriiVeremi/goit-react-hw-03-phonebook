@@ -1,25 +1,24 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { AiOutlineUserDelete } from 'react-icons/ai';
-import css from './ContactList.module.css'
+import { List, Item, Name, Text, Button } from './ContactList.styled';
 
 const ContactList = ({ contacts, onDeleteContacts }) => (
-  <ul className={css.list}>
+  <List>
     {contacts.map(({ id, name, number }) => (
-      <li className={css.item} key={id}>
-        <p className={css.name}>{name} :</p>
-        <p className={css.text}>{number} :</p>
-        <button
-          className={css.btn__on}
+      <Item key={id}>
+        <Name>{name} :</Name>
+        <Text>{number}</Text>
+        <Button
           type="button"
           onClick={() => onDeleteContacts(id)}
         >
-          <AiOutlineUserDelete className={css.item_icon} />
+          <AiOutlineUserDelete />
           Delete
-        </button>
-      </li>
+        </Button>
+      </Item>
     ))}
-  </ul>
+  </List>
 );
 
 export default ContactList;

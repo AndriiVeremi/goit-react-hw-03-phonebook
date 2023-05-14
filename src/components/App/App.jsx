@@ -5,7 +5,7 @@ import Section from '../Section/Section';
 import ContactList from '../ContactList/ContactList';
 import Filter from '../Filter/Filter';
 import ContactForm from '../ContactForm/ContactForm';
-import css from './App.module.css';
+import { Container } from './App.styled';
 
 class App extends Component {
   state = {
@@ -75,7 +75,7 @@ class App extends Component {
     const visibleContacts = this.getVisibleContacts();
 
     return (
-      <div className={css.container}>
+      <Container>
         <Section title="Phonebook">
           <ContactForm onSubmit={this.addToList} />
           <Header title="Contacts" />
@@ -85,7 +85,7 @@ class App extends Component {
             onDeleteContacts={this.deleteContacts}
           />
         </Section>
-      </div>
+      </Container>
     );
   }
 }

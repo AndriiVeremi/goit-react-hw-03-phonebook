@@ -1,16 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import css from './Section.module.css'
+import { Container } from './Section.styled';
 
 
 import Header from 'components/Header/Header';
 
 const Section = ({ title, children }) => {
   return (
-    <section className={css.section}>
+    <Container>
       <Header title={title} />
       {children}
-    </section>
+    </Container>
   );
 };
 
