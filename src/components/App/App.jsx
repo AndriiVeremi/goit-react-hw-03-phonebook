@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
+import { nanoid } from 'nanoid';
 import Header from '../Header/Header';
 import Section from '../Section/Section';
 import ContactList from '../ContactList/ContactList';
 import Filter from '../Filter/Filter';
 import ContactForm from '../ContactForm/ContactForm';
-import { nanoid } from 'nanoid';
 import css from './App.module.css';
 
 class App extends Component {
